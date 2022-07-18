@@ -117,6 +117,10 @@
           margin-bottom: 0;
         }
 
+        .nav-item{
+          text-decoration: none;
+        }
+
       </style>
       
     <body>
@@ -191,7 +195,8 @@
     
                     </ul>
                     <div class="text-end">
-                        <button type="button" class="btn btn-light me-2">Login</button>
+                        <button type="button" class="btn btn-light me-2">
+                          <a class ="nav-item " href="{% url 'login' %}">Login</a></button>
                         <!-- <button type="button" class="btn btn-warning">Sign-up</button> -->
                     </div>
                 </div>
