@@ -195,9 +195,16 @@
     
                     </ul>
                     <div class="text-end">
-                        <button type="button" class="btn btn-light me-2">
-                          <a class ="nav-item " href="{% url 'login' %}">Login</a></button>
+                        {% if user.is_authenticated %}
+                          <button type="button" class="btn btn-light me-2 mb=0">
+                           <a class ="nav-item " href="#">Profile</a></button>
+                          <button type="button" class="btn btn-light me-2 mb=0">
+                            <a class ="nav-item " href="{% url 'logout' %}">Logout</a></button>
+                        {% else %}
+                          <button type="button" class="btn btn-light me-2">
+                            <a class ="nav-item " href="{% url 'login' %}">Login</a></button>
                         <!-- <button type="button" class="btn btn-warning">Sign-up</button> -->
+                        {% endif %}
                     </div>
                 </div>
             </div>
