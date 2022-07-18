@@ -1,0 +1,111 @@
+{% extends "property/base.html" %}
+{% block content %}
+
+<style>
+
+    .md-36 {
+        font-size: 36px;
+    }
+
+    div#carousel-example-generic {
+        position: relative;
+    }
+
+    div.form-group {
+        position: absolute;
+        z-index: 9999999;
+
+    }
+
+    .search-bar {
+        background: rgb(255, 255, 255);
+        box-shadow: 5px 3px 60px rgba(101, 101, 101, 0.797);
+    }
+
+    .search-container {
+        max-width: 600px;
+    }
+
+    .card-img-top {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .card {
+        margin: 70px;
+        height: 22rem;
+        transition: all 0.2s ease-in-out;
+    }
+
+
+    .card:hover{
+        transform: scale(1.15);
+        box-shadow: 3px 3px 50px grey;
+    }
+</style>
+
+<div id="carouselExampleInterval" class="carousel slide h-100 d-flex align-items-center justify-content-center"
+    data-bs-ride="carousel">
+    <div class="form-group container search-container">
+        <form class="d-flex " role="search">
+            <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="carousel-inner" style="max-height: 680px;">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <img src="https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1378&q=80"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container d-flex align-items-center justify-content-center">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-vector/credit-card-concept-illustration_114360-170.jpg?1&t=st=1658076844~exp=1658077444~hmac=95203baa68bcb405c8a3847516aec475fc2bc5f2dc0970900af84efa4fb59c26&w=740" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Buying property made easy</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-vector/vector-illustration-retro-style-hand-giving-money-other-hand_1284-42589.jpg?t=st=1658076675~exp=1658077275~hmac=2eafa629684b2a0dca3fb0201a70e83a11264340f11fad7bab425f35ca29efc7&w=740"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Sell your property in an instant. Hassle free</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-vector/house-rent-abstract-concept-vector-illustration-booking-house-online-best-rental-property-real-estate-service-accommodation-marketplace-rental-listing-monthly-rent-abstract-metaphor_335657-1954.jpg?t=st=1658076770~exp=1658077370~hmac=3daf87f061c4cccae721e2c2b00c593ac5f9a3f16a6b0f309e3083cf0c52239b&w=740"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Wanna rent your property?? We got you covered</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
