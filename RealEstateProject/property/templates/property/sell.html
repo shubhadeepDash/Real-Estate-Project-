@@ -2,11 +2,35 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div>
-        <form action="" method="post">
+<style>
+    input {
+        margin: 10px 5px;
+        max-width: 450px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    
+    textarea{
+        max-width: 450px;
+    }
+</style>
+<div class="container">
+
+    <form action="" method="post">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Sell</legend>
             {% csrf_token %}
-            {{form.as_p}}
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+            {{form | crispy}}
+            <div class="container my-3">
+                <input type="submit" class="btn btn-outline-success" value="Submit">
+            </div>
+        </fieldset>
+    </form>
+</div>
 {% endblock content %}

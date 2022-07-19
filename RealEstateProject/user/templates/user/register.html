@@ -1,29 +1,41 @@
 {% extends "property/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="container">
-        <form method="POST">
-            {% csrf_token %}
-            <div class ="container">
-                <fieldset class="form-group">
+<style>
+    input{
+        max-width: 400px;
+    }
+
+    fieldset{
+        padding: 2%;
+    }
+</style>
+<div class="container wrapper my-5">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Today</legend>
-            </div>
-            
-               <div class="container" >
-                {{ form|crispy }}   
-               </div> 
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-danger" type="submit" >Sign Up</button>
-            </div>
-        </form>
-        <div class ="cointainer">
-            <div class="border-top pt-3">
-                        <small class="text-muted">
-                            Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
-                        </small>
+                <div class="container">
+                    {{ form|crispy }}
+                    <div class="form-group">
+                        <button class="btn btn-outline-danger" type="submit">Sign Up</button>
                     </div>
+                </div>
         </div>
-        
+
+        <!-- <div class="container" >
+                {{ form|crispy }}   
+               </div>  -->
+        </fieldset>
+    </form>
+    <div class="cointainer">
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
     </div>
+
+</div>
 {% endblock content %}
