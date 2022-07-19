@@ -1,7 +1,22 @@
 {% extends "property/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class = 'container'>
+<style>
+    input,label,button{
+        margin: 15px;
+    }
+
+    input{
+        max-width: 500px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }    
+    
+</style>
+<div class = 'container my-4'>
 <div class="content-section">
         <form method="POST">
             {% csrf_token %}
