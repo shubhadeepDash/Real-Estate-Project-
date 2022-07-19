@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'property.apps.PropertyConfig',
     'user.apps.UserConfig',
     'crispy_forms',
+    'maps',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
