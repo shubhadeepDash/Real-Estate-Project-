@@ -28,6 +28,7 @@ urlpatterns = [
     path('sell/', property_views.sellProperty, name='sell'),
     path('admin/', admin.site.urls),
     path('register/', user_views.register,name='register'),
+    path('profile/', user_views.profile, name='profile'),
 ]
 
 if settings.DEBUG:
