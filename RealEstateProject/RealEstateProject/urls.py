@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from property import views as property_views
+from maps import views 
 
 urlpatterns = [
     path('', include('property.urls')),
@@ -27,6 +28,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'), name='logout'),
     path('sell/', property_views.sellProperty, name='sell'),
     path('admin/', admin.site.urls),
+    path('map/', views.AddressView.as_view(template_name='maps/map.html'), name='map'),
     path('register/', user_views.register,name='register'),
     path('profile/', user_views.profile, name='profile'),
 ]
