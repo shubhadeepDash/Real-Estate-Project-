@@ -1,3 +1,4 @@
+from email.mime import image
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -8,16 +9,16 @@ class Property(models.Model):
     description = models.TextField()
     longitude = models.DecimalField(max_digits=11, decimal_places=7,null=True,blank=True)
     latitude = models.DecimalField(max_digits=11, decimal_places=7,null=True,blank=True)
-    pincode = models.IntegerField(default=000000)
     length = models.DecimalField(max_digits=20, decimal_places=5)
     breadth = models.DecimalField(max_digits=20, decimal_places=5)
     price = models.DecimalField(max_digits=15, decimal_places=2)
+    pincode = models.IntegerField(default = 000000)
+    city = models.CharField(max_length=40,null=True,blank=True)
+    state = models.CharField(max_length=40,null=True,blank=True)
+    country = models.CharField(max_length=40,null=True,blank=True)
+    image = models.ImageField(default = 'default.jpg',upload_to='property_pics')
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
 
-
-class PropertyPictures(models.Model):
-    property = models.ForeignKey(Property, on_delete=models.CASCADE)
-    image = models.ImageField(default="default.jpg",upload_to='property_pics')

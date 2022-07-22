@@ -1,0 +1,17 @@
+{% extends "property/base.html" %}
+{% block content %}
+
+<div class="container">
+    {% for property in properties %}
+    <div class="card p-5" style="width: 18rem;">
+        <img src="{{ property.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{property.title}}</h5>
+            <p class="card-text">{{property.description}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
