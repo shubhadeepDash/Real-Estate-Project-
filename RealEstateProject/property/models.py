@@ -16,7 +16,7 @@ class Property(models.Model):
     city = models.CharField(max_length=40,null=True,blank=True)
     state = models.CharField(max_length=40,null=True,blank=True)
     country = models.CharField(max_length=40,null=True,blank=True)
-    image = models.ImageField(default = 'default.jpg',upload_to='property_pics')
+    image = models.ImageField(default = 'default.jpg',upload_to='property_pics/')
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
