@@ -48,8 +48,8 @@
     data-bs-ride="carousel">
     <div class="form-group container search-container">
         <form class="d-flex " role="search">
-            <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-secondary" type="submit">Search</button>
+            <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search" name="q">
+            <a href="{% url 'property-results' %}"><button class="btn btn-secondary" type="submit">Search</button></a>
         </form>
     </div>
     <div class="carousel-inner" style="max-height: 680px;">

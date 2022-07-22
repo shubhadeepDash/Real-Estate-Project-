@@ -20,15 +20,18 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from property import views as property_views
+from maps import views 
 
 urlpatterns = [
     path('', include('property.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='user/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'), name='logout'),
-    path('sell/', property_views.sellProperty, name='sell'),
     path('admin/', admin.site.urls),
+    # path('sell/', views.AddressView.as_view(template_name='maps/map.html'), name='map'),
+    path('sell/', views.sellProperty, name='sell'),
     path('register/', user_views.register,name='register'),
     path('profile/', user_views.profile, name='profile'),
+    # path('propertypics/<int:fk>/',views.propertyPics,name='property-pics')
 ]
 
 if settings.DEBUG:
