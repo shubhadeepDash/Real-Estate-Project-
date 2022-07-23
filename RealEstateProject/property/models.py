@@ -13,7 +13,7 @@ class Property(models.Model):
     breadth = models.DecimalField(max_digits=20, decimal_places=5)
     price = models.DecimalField(max_digits=15, decimal_places=2)
     pincode = models.IntegerField(default = 000000)
-    city = models.CharField(max_length=40,null=True,blank=True)
+    city = models.CharField(max_length=40, null=True, blank=True)
     state = models.CharField(max_length=40,null=True,blank=True)
     country = models.CharField(max_length=40,null=True,blank=True)
     image = models.ImageField(default = 'default.jpg',upload_to='property_pics/')
